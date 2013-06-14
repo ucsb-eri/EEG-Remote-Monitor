@@ -8,9 +8,10 @@
     "components"
   ],
   "dependencies": {
-    "jquery": "~2.0.2",
     "backbone": "~1.0.0",
     "underscore": "~1.4.4",
-    "bootstrap": "~2.1.1"
+    "bootstrap": "~2.1.1",
+    "toolbar": "git://github.com/paulkinzett/toolbar.git#~1.0.1",
+    "jquery": "1.9.1"
   }
 }

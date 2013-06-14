@@ -1,0 +1,26 @@
+{
+  "name": "remote-monitor",
+  "version": "0.0.1",
+  "description": "Remote monitor for EEG group at UCSB.",
+  "main": "index.html",
+  "dependencies": {
+    "bower": "~0.9.2",
+    "compass": "~0.1.0",
+    "sass": "~0.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://zigzackattack@github.com/ucsb-eri/EEG-Remote-Monitor.git"
+  },
+  "author": "Andrew Lo, Zachary Babtkis",
+  "license": "BSD",
+  "readmeFilename": "Readme.md",
+  "gitHead": "4d0f609895066ade2dbd478d344bb17a70e1d824",
+  "bugs": {
+    "url": "https://github.com/ucsb-eri/EEG-Remote-Monitor/issues"
+  }
+}

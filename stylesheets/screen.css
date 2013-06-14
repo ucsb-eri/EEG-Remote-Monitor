@@ -1,0 +1,343 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 8, ../sass/screen.scss */
+body {
+  /* pseudo-shadow */
+  /** Progress bar styling */
+}
+/* line 9, ../sass/screen.scss */
+body table {
+  width: 100%;
+}
+/* line 12, ../sass/screen.scss */
+body th {
+  cursor: pointer;
+}
+/* line 15, ../sass/screen.scss */
+body button.loadMore {
+  background: #888;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 15px;
+  color: #eee;
+}
+/* line 22, ../sass/screen.scss */
+body #app {
+  background: #EEE;
+  padding: 35px 0;
+}
+/* line 26, ../sass/screen.scss */
+body .title {
+  color: #888;
+  font-size: 81px;
+  font-weight: normal;
+  letter-spacing: -4px;
+  margin-bottom: 28px;
+  margin-left: 15px;
+}
+/* line 35, ../sass/screen.scss */
+body .container {
+  overflow: hidden;
+  clear: both;
+}
+/* line 39, ../sass/screen.scss */
+body .column {
+  float: left;
+  /** Auto height CSS fix */
+  padding-bottom: 1000000000px;
+  margin-bottom: -1000000000px;
+}
+/* line 46, ../sass/screen.scss */
+body #sites {
+  /*
+    background: #001;
+    background: #112;
+  */
+  min-height: 500px;
+  overflow: visible;
+}
+/* line 54, ../sass/screen.scss */
+body #sites ul {
+  position: relative;
+  margin: 0;
+  white-space: nowrap;
+}
+/* line 60, ../sass/screen.scss */
+body .site {
+  background: #001;
+  background: #AAA;
+  color: #FFF;
+  display: block;
+  list-style: none;
+  margin-right: 0;
+  margin-bottom: 1px;
+  padding: 15px 30px;
+  padding-bottom: 25px;
+}
+/* line 71, ../sass/screen.scss */
+body .site:hover {
+  background: #223;
+  background: #9f9f9f;
+  cursor: pointer;
+}
+/* line 76, ../sass/screen.scss */
+body .site.active {
+  background: #223;
+  background: #888;
+  cursor: pointer;
+}
+/* line 82, ../sass/screen.scss */
+body .disk-info ul {
+  display: block;
+  padding: 0;
+  margin: 0;
+  width: 200px;
+}
+/* line 88, ../sass/screen.scss */
+body .disk-info h2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.8em;
+  text-transform: uppercase;
+}
+/* line 94, ../sass/screen.scss */
+body .disk-info li {
+  color: #D0D0D0;
+  font-size: 0.9em;
+  line-height: 1.4em;
+  margin-left: 15px;
+  list-style: none;
+}
+/* line 100, ../sass/screen.scss */
+body .disk-info li:before {
+  color: #EEE;
+  content: attr(title) ": ";
+  font-weight: bold;
+}
+/* line 106, ../sass/screen.scss */
+body .disk-info .task-options {
+  position: absolute;
+  right: -100px;
+  top: -20px;
+  background: #333;
+  border-radius: 2px;
+  color: #fff;
+}
+/* line 113, ../sass/screen.scss */
+body .disk-info .task-options span {
+  display: block;
+  padding: 5px;
+}
+/* line 116, ../sass/screen.scss */
+body .disk-info .task-options span:hover {
+  background: #444;
+}
+/* line 120, ../sass/screen.scss */
+body .disk-info .task-options:before {
+  content: "";
+  left: -10px;
+  position: absolute;
+  top: 60px;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #333;
+  border-top: 10px solid transparent;
+}
+/* line 133, ../sass/screen.scss */
+body .disk-status {
+  background: #FFF;
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+/* line 141, ../sass/screen.scss */
+body #tasks {
+  background: #09A;
+  background: #888;
+  width: 100%;
+}
+/* line 146, ../sass/screen.scss */
+body .task {
+  color: #EEE;
+  cursor: pointer;
+  float: left;
+  font-weight: bold;
+  height: 55px;
+  line-height: 55px;
+  padding: 0 35px;
+  text-transform: uppercase;
+}
+/* line 156, ../sass/screen.scss */
+body .task:hover {
+  background: #777;
+}
+/* line 167, ../sass/screen.scss */
+body #items {
+  background: #CCC;
+  background: #BBB;
+  height: auto;
+  width: 100%;
+}
+/* line 173, ../sass/screen.scss */
+body #items ul {
+  margin: 0;
+}
+/* line 176, ../sass/screen.scss */
+body .item {
+  color: #888;
+  cursor: pointer;
+  display: block;
+  float: left;
+  font-size: 14px;
+  margin: 0;
+  padding-top: 7px;
+  padding: 5px 25px;
+}
+/* line 186, ../sass/screen.scss */
+body .item:hover {
+  background: #AAA;
+}
+/* line 194, ../sass/screen.scss */
+body #viewport {
+  /** background: #D0D0D0; */
+  min-height: 415px;
+  padding: 10px;
+}
+/* line 200, ../sass/screen.scss */
+body #disks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 205, ../sass/screen.scss */
+body .disk {
+  float: left;
+  width: 44%;
+  padding: 3%;
+  list-style: none;
+}
+/* line 211, ../sass/screen.scss */
+body .disk ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 217, ../sass/screen.scss */
+body .sorted.desc:after {
+  content: " \25b2";
+}
+/* line 220, ../sass/screen.scss */
+body .sorted.asc:after {
+  content: " \25bc";
+}
+/* line 224, ../sass/screen.scss */
+body .even {
+  background: #ddd;
+}
+/* line 227, ../sass/screen.scss */
+body .odd {
+  background: #ccc;
+}
+/* line 232, ../sass/screen.scss */
+body .progress {
+  width: 250px;
+  height: 20px;
+  border-radius: 10px;
+  background: #222;
+}
+/* line 238, ../sass/screen.scss */
+body .progress .percent {
+  width: 250px;
+  position: absolute;
+  text-align: center;
+  color: white;
+}
+/* line 244, ../sass/screen.scss */
+body .progress div {
+  height: 30px;
+}
+/* line 247, ../sass/screen.scss */
+body .red, body .warn-level-2 {
+  background: #ED5151;
+}
+/* line 250, ../sass/screen.scss */
+body .yellow, body .warn-level-1 {
+  background: #F2F06B;
+}
+/* line 253, ../sass/screen.scss */
+body .blue, body .warn-level-0 {
+  background: #4AD1F0;
+}
+/* line 256, ../sass/screen.scss */
+body .green {
+  background: #6AF795;
+}
