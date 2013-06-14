@@ -17,33 +17,46 @@
 <body>
   <section class="container" id="app">
     <h1 class="title">Remote Monitor</h1>
-    <li class="task-options">
-      <span data-action='info'><i class='icon-info-sign icon-white'></i> Info</span>
-      <span data-action='disk'><i class='icon-hdd icon-white'></i> HDD</span>
-      <span data-action='cpu'><i class='icon-tasks icon-white'></i> CPU</span>
-      <span data-action='file'><i class='icon-folder-open icon-white'></i> Files</span>
-      <span data-action='work'><i class='icon-wrench icon-white'></i> Work</span>
-    </li>
     <div class='row'>
-      <section id="sites" class='span4'>
-          <ul id="sites-list">
-            <!-- Sites rendered here -->
-          </ul>
+      <section id="sites">
+        <ul id="sites-list">
+          <!-- Sites rendered here -->
+        </ul>
       </section>
-        <!-- <section id="items" class="clearfix">
+
+      <section id="right">
+        <section class="clearfix" id="tasks">
+          <div class="task active" data-task="info">
+            Info
+          </div>
+          <div class="task" data-task="disk">
+            Disk
+          </div>
+          <div class="task" data-task="cpu">
+            CPU
+          </div>
+          <div class="task" data-task="file">
+            Files
+          </div>
+          <div class="task" data-task="work">
+            Work
+          </div>
+        </section>
+
+        <section id="items" class="clearfix">
           <ul>
             <li class="item active">HDA1</li>
             <li class="item">HDA2</li>
             <li class="item">HDA3</li>
             <li class="item">HDA4</li>
           </ul>
-        </section> -->
+        </section>
 
-        <section id="viewport" class="span7">
+        <section id="viewport" class="">
           <!-- Site info rendered here -->
         </section>
-      </div>
-    </section>
+      </section>
+    </div>
   </section>
 
   <!-- App templates -->

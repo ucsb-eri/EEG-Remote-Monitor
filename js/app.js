@@ -343,23 +343,11 @@
 		}
 	});
 
-	var TaskView = Backbone.View.extend({
-		el: '.task-options',
-		initialize: function(site) {
-			this.$el.on('click', function(e) {
-				var target = $(e.target),
-					action = target.data('action');
-
-				router.navigate(action + '/' + site.id, {trigger: true, replace: true});
-			});
-		}
-	});
-
 	var AppView = Backbone.View.extend({
 		el: '#app',
 		events: {
 			'click #tasks': 'route',
-			'click .site': 'openTasks'
+			'click .site': 'route'
 		},
 		options: {
 			state: 'info'
@@ -378,16 +366,6 @@
 				html = template({sites: sites.toJSON()});
 
 			$('#sites-list').html(html);
-		},
-		openTasks: function(e) {
-			var view,
-				target = $(e.currentTarget);
-
-			view = new TaskView({id: target.data('id')});
-
-			target.find('ul').append(view.$el);
-
-			view.$el.fadeIn('slow');
 		},
 		route: function (e) {
 			var active = sites.findWhere({active: true}),

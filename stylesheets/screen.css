@@ -68,33 +68,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* line 8, ../sass/screen.scss */
-body {
-  /* pseudo-shadow */
-  /** Progress bar styling */
-}
-/* line 9, ../sass/screen.scss */
-body table {
+table {
   width: 100%;
 }
-/* line 12, ../sass/screen.scss */
-body th {
+
+/* line 11, ../sass/screen.scss */
+th {
   cursor: pointer;
 }
-/* line 15, ../sass/screen.scss */
-body button.loadMore {
+
+/* line 14, ../sass/screen.scss */
+button.loadMore {
   background: #888;
   border: none;
   border-radius: 5px;
   padding: 7px 15px;
   color: #eee;
 }
-/* line 22, ../sass/screen.scss */
-body #app {
+
+/* line 21, ../sass/screen.scss */
+#app {
   background: #EEE;
   padding: 35px 0;
 }
-/* line 26, ../sass/screen.scss */
-body .title {
+
+/* line 25, ../sass/screen.scss */
+.title {
   color: #888;
   font-size: 81px;
   font-weight: normal;
@@ -102,35 +101,42 @@ body .title {
   margin-bottom: 28px;
   margin-left: 15px;
 }
-/* line 35, ../sass/screen.scss */
-body .container {
+
+/* line 34, ../sass/screen.scss */
+.container {
   overflow: hidden;
   clear: both;
 }
-/* line 39, ../sass/screen.scss */
-body .column {
+
+/* line 38, ../sass/screen.scss */
+.column {
   float: left;
   /** Auto height CSS fix */
   padding-bottom: 1000000000px;
   margin-bottom: -1000000000px;
 }
-/* line 46, ../sass/screen.scss */
-body #sites {
+
+/* line 45, ../sass/screen.scss */
+#sites {
   /*
     background: #001;
     background: #112;
   */
   min-height: 500px;
   overflow: visible;
+  float: left;
+  width: 30%;
 }
-/* line 54, ../sass/screen.scss */
-body #sites ul {
+
+/* line 55, ../sass/screen.scss */
+#sites ul {
   position: relative;
   margin: 0;
   white-space: nowrap;
 }
-/* line 60, ../sass/screen.scss */
-body .site {
+
+/* line 61, ../sass/screen.scss */
+.site {
   background: #001;
   background: #AAA;
   color: #FFF;
@@ -141,48 +147,51 @@ body .site {
   padding: 15px 30px;
   padding-bottom: 25px;
 }
-/* line 71, ../sass/screen.scss */
-body .site:hover {
+
+/* line 72, ../sass/screen.scss */
+.site:hover {
   background: #223;
   background: #9f9f9f;
   cursor: pointer;
 }
-/* line 76, ../sass/screen.scss */
-body .site.active {
+
+/* line 77, ../sass/screen.scss */
+.site.active {
   background: #223;
   background: #888;
   cursor: pointer;
 }
-/* line 82, ../sass/screen.scss */
-body .disk-info ul {
+
+/* line 83, ../sass/screen.scss */
+.disk-info ul {
   display: block;
   padding: 0;
   margin: 0;
   width: 200px;
 }
-/* line 88, ../sass/screen.scss */
-body .disk-info h2 {
+/* line 89, ../sass/screen.scss */
+.disk-info h2 {
   margin: 0;
   font-weight: 600;
   font-size: 1.8em;
   text-transform: uppercase;
 }
-/* line 94, ../sass/screen.scss */
-body .disk-info li {
+/* line 95, ../sass/screen.scss */
+.disk-info li {
   color: #D0D0D0;
   font-size: 0.9em;
   line-height: 1.4em;
   margin-left: 15px;
   list-style: none;
 }
-/* line 100, ../sass/screen.scss */
-body .disk-info li:before {
+/* line 101, ../sass/screen.scss */
+.disk-info li:before {
   color: #EEE;
   content: attr(title) ": ";
   font-weight: bold;
 }
-/* line 106, ../sass/screen.scss */
-body .disk-info .task-options {
+/* line 107, ../sass/screen.scss */
+.disk-info .task-options {
   position: absolute;
   right: -100px;
   top: -20px;
@@ -190,17 +199,17 @@ body .disk-info .task-options {
   border-radius: 2px;
   color: #fff;
 }
-/* line 113, ../sass/screen.scss */
-body .disk-info .task-options span {
+/* line 114, ../sass/screen.scss */
+.disk-info .task-options span {
   display: block;
   padding: 5px;
 }
-/* line 116, ../sass/screen.scss */
-body .disk-info .task-options span:hover {
+/* line 117, ../sass/screen.scss */
+.disk-info .task-options span:hover {
   background: #444;
 }
-/* line 120, ../sass/screen.scss */
-body .disk-info .task-options:before {
+/* line 121, ../sass/screen.scss */
+.disk-info .task-options:before {
   content: "";
   left: -10px;
   position: absolute;
@@ -211,22 +220,31 @@ body .disk-info .task-options:before {
   border-right: 10px solid #333;
   border-top: 10px solid transparent;
 }
-/* line 133, ../sass/screen.scss */
-body .disk-status {
+
+/* line 134, ../sass/screen.scss */
+.disk-status {
   background: #FFF;
   float: left;
   width: 50px;
   height: 50px;
   margin-right: 15px;
 }
+
 /* line 141, ../sass/screen.scss */
-body #tasks {
+#right {
+  float: left;
+  width: 70%;
+}
+
+/* line 146, ../sass/screen.scss */
+#tasks {
   background: #09A;
   background: #888;
   width: 100%;
 }
-/* line 146, ../sass/screen.scss */
-body .task {
+
+/* line 151, ../sass/screen.scss */
+.task {
   color: #EEE;
   cursor: pointer;
   float: left;
@@ -236,23 +254,28 @@ body .task {
   padding: 0 35px;
   text-transform: uppercase;
 }
-/* line 156, ../sass/screen.scss */
-body .task:hover {
+
+/* line 161, ../sass/screen.scss */
+.task:hover {
   background: #777;
 }
-/* line 167, ../sass/screen.scss */
-body #items {
+
+/* pseudo-shadow */
+/* line 172, ../sass/screen.scss */
+#items {
   background: #CCC;
   background: #BBB;
   height: auto;
   width: 100%;
 }
-/* line 173, ../sass/screen.scss */
-body #items ul {
+
+/* line 178, ../sass/screen.scss */
+#items ul {
   margin: 0;
 }
-/* line 176, ../sass/screen.scss */
-body .item {
+
+/* line 181, ../sass/screen.scss */
+.item {
   color: #888;
   cursor: pointer;
   display: block;
@@ -262,82 +285,112 @@ body .item {
   padding-top: 7px;
   padding: 5px 25px;
 }
-/* line 186, ../sass/screen.scss */
-body .item:hover {
+
+/* line 191, ../sass/screen.scss */
+.item:hover {
   background: #AAA;
 }
-/* line 194, ../sass/screen.scss */
-body #viewport {
+
+/* line 199, ../sass/screen.scss */
+#viewport {
   /** background: #D0D0D0; */
   min-height: 415px;
   padding: 10px;
 }
-/* line 200, ../sass/screen.scss */
-body #disks {
+
+/* line 205, ../sass/screen.scss */
+#disks {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 205, ../sass/screen.scss */
-body .disk {
+
+/* line 210, ../sass/screen.scss */
+.disk {
   float: left;
   width: 44%;
   padding: 3%;
   list-style: none;
 }
-/* line 211, ../sass/screen.scss */
-body .disk ul {
+
+/* line 216, ../sass/screen.scss */
+.disk ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 217, ../sass/screen.scss */
-body .sorted.desc:after {
+
+/* line 222, ../sass/screen.scss */
+.sorted.desc:after {
   content: " \25b2";
 }
-/* line 220, ../sass/screen.scss */
-body .sorted.asc:after {
+
+/* line 225, ../sass/screen.scss */
+.sorted.asc:after {
   content: " \25bc";
 }
-/* line 224, ../sass/screen.scss */
-body .even {
+
+/* line 229, ../sass/screen.scss */
+.even {
   background: #ddd;
 }
-/* line 227, ../sass/screen.scss */
-body .odd {
+
+/* line 232, ../sass/screen.scss */
+.odd {
   background: #ccc;
 }
-/* line 232, ../sass/screen.scss */
-body .progress {
+
+/** Progress bar styling */
+/* line 237, ../sass/screen.scss */
+.progress {
   width: 250px;
   height: 20px;
   border-radius: 10px;
   background: #222;
 }
-/* line 238, ../sass/screen.scss */
-body .progress .percent {
+
+/* line 243, ../sass/screen.scss */
+.progress .percent {
   width: 250px;
   position: absolute;
   text-align: center;
   color: white;
 }
-/* line 244, ../sass/screen.scss */
-body .progress div {
+
+/* line 249, ../sass/screen.scss */
+.progress div {
   height: 30px;
 }
-/* line 247, ../sass/screen.scss */
-body .red, body .warn-level-2 {
+
+/* line 252, ../sass/screen.scss */
+.red, .warn-level-2 {
   background: #ED5151;
 }
-/* line 250, ../sass/screen.scss */
-body .yellow, body .warn-level-1 {
+
+/* line 255, ../sass/screen.scss */
+.yellow, .warn-level-1 {
   background: #F2F06B;
 }
-/* line 253, ../sass/screen.scss */
-body .blue, body .warn-level-0 {
+
+/* line 258, ../sass/screen.scss */
+.blue, .warn-level-0 {
   background: #4AD1F0;
 }
-/* line 256, ../sass/screen.scss */
-body .green {
+
+/* line 261, ../sass/screen.scss */
+.green {
   background: #6AF795;
+}
+
+@media all and (max-width: 979px) {
+  /* line 266, ../sass/screen.scss */
+  #sites, #right {
+    width: 100%;
+  }
+
+  /* line 269, ../sass/screen.scss */
+  .disk {
+    width: 100%;
+    clear: both;
+  }
 }
