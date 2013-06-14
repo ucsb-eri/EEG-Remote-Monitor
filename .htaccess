@@ -1,0 +1,8 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^sites/(.+?)/(.+?)/(.+?)/*$ App.php?site=$1&action=$2&actId=$3 [L]
+RewriteRule ^sites/(.+?)/(.+?)/*$ App.php?site=$1&action=$2 [L]
+RewriteRule ^sites/(.+?)/*$ App.php?site=$1 [L]
+RewriteRule ^sites/* App.php [L]
+RewriteRule ^(info|disk|cpu|file|work)/([0-9]*?) index.html [L]

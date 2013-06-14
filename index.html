@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <base href="http://web.nees.ucsb.edu/RemoteMon/build/" />
+
+  <title>RemoteMon Prototype</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="components/bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+<body>
+  <section class="container" id="app">
+    <h1 class="title">Remote Monitor</h1>
+    <section id="sites">
+      <ul id="sites-list">
+        <!-- Sites rendered here -->
+      </ul>
+    </section>
+
+    <section id="right">
+      <section class="clearfix" id="tasks">
+        <div class="task active" data-task="info">
+          Info
+        </div>
+        <div class="task" data-task="disk">
+          Disk
+        </div>
+        <div class="task" data-task="cpu">
+          CPU
+        </div>
+        <div class="task" data-task="file">
+          Files
+        </div>
+        <div class="task" data-task="work">
+          Work
+        </div>
+      </section>
+
+      <section id="items" class="clearfix">
+        <ul>
+          <li class="item active">HDA1</li>
+          <li class="item">HDA2</li>
+          <li class="item">HDA3</li>
+          <li class="item">HDA4</li>
+        </ul>
+      </section>
+
+      <section id="viewport" class="">
+        <!-- Site info rendered here -->
+      </section>
+    </section>
+  </section>
+
+  <!-- App templates -->
+
+  <script type="text/template" id="sites-template">
+    <% _.each(sites, function(site) { %>
+    <li class='site <%= (site.active) ? "active" : "" %> warn-level-<%= site.warnLevel %>' data-id='<%= site.id %>'>
+      <ul class="disk-info">
+        <h2><%= site.name %></h2>
+
+        <li title="Location"><%= site.location %></li>
+        <li title="Uptime"><%= site.uptime %></li>
+        <li title="Last Update"><%= site.lastUpdate %></li>
+      </ul>
+    </li>
+    <% }); %>
+  </script>
+
+  <script type='text/template' id='info-template'>
+    <ul class='overview'>
+      <li><strong>Antelope: </strong><span id='antelope'><%= obj.antelope %></span></li>
+      <li><strong>Last Changed: </strong><span id='last-changed'><%= obj.lastChanged %></span></li>
+      <li><strong>Misc: </strong><span id='misc'><%= obj.misc %></span></li>
+    </ul>
+  </script>
+
+  <script type='text/template' id='disks-template'>
+    <ul id='disks'>
+      <% _.each(obj, function(disk) { %>
+        <li class='disk' data-id="<%= disk.id %>">
+          <ul>
+            <li><strong>Mount: </strong><%= disk.mnt %></li>
+            <li>
+              <div class='progress'>
+                <span class='percent'><%= disk.percent %>%</span>
+                <div class="<%=disk.color%>" style="width:<%= disk.percent %>%;"></div>
+              </div>
+              <strong class='used'><%= disk.used %> of <%= disk.total %></strong> used as of
+              <span class='as-of'><%= disk.time %></span>
+            </li>
+          </ul>
+        </li>
+      <% }); %>
+  </script>
+
+  <script type='text/template' id='cpu-template'>
+    <table class='table' id='cpus'>
+      <thead>
+        <tr>
+          <th class='sortable' data-bind='tstamp'>Time</th>
+          <th class='sortable' data-bind='usage'>Usage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% _.limitSort(obj, sortInfo.target, sortInfo.order, options, function(cpu) { %>
+          <tr class='cpu'>
+            <td><%= cpu.time %></td>
+            <td><%= cpu.usage %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    <button class='loadMore'>Load More</button>
+  </script>
+
+  <script type='text/template' id='files-template'>
+    <table class='table'>
+      <thead>
+        <tr>
+          <th class='sortable' data-bind='id'>ID</th>
+          <th class='sortable' data-bind='name'>Name</th>
+          <th class='sortable' data-bind='lastUpdate'>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% _.limitSort(obj, sortInfo.target, sortInfo.order, options, function(file) { %>
+          <tr>
+            <td><%= file.id %></td>
+            <td><%= file.name %></td>
+            <td><%= file.date %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    <button class='loadMore'>Load More</button>
+  </script>
+
+  <script type='text/template' id='work-template'>
+    <table class='table'>
+      <thead>
+        <tr>
+          <th class='sortable' data-bind='start'>Start</th>
+          <th class='sortable' data-bind='end'>End</th>
+          <th class='sortable' data-bind='comment'>Comment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% _.each(obj, function(work) { %>
+          <tr>
+            <td><%= work.start %></td>
+            <td><%= work.end %></td>
+            <td><%= work.comment %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </script>
+
+  <!-- JS resources -->
+  <script src="components/underscore/underscore.js"></script>
+  <script src="components/jquery/jquery.js"></script>
+  <script src="components/backbone/backbone.js"></script>
+  <script src="components/bootstrap/js/bootstrap.js"></script>
+
+  <!-- Main app -->
+  <script src="js/app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,223 @@
+body {
+    }
+    table {
+      width: 100%;
+    }
+    th {
+      cursor: pointer;
+    }
+    button {
+      background: #888;
+      border: none;
+      border-radius: 5px;
+      padding: 7px 15px;
+      color: #eee;
+    }
+    #app {
+      background: #EEE;
+      padding: 35px 0;
+    }
+    .title {
+      color: #888;
+      font-size: 81px;
+      font-weight: normal;
+      letter-spacing: -4px;
+      margin-bottom: 28px;
+      margin-left: 15px;
+    }
+
+    .container {
+      overflow: hidden;
+      clear: both;
+    }
+    .column {
+      float: left;
+      /** Auto height CSS fix */
+      padding-bottom: 1000000000px;
+      margin-bottom: -1000000000px;
+    }
+
+    #sites {
+    /*
+      background: #001;
+      background: #112;
+    */
+      float: left;
+      min-height: 500px;
+      overflow: auto;
+      width: 30%;
+    }
+    #sites ul {
+      position: relative;
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    .site {
+      background: #001;
+      background: #AAA;
+      color: #FFF;
+      display: block;
+      list-style: none;
+      margin-right: 0;
+      margin-bottom: 1px;
+      padding: 15px 30px;
+      padding-bottom: 25px;
+    }
+    .site:hover {
+      background: #223;
+      background: #9f9f9f;
+      cursor: pointer;
+    }
+    .site.active {
+      background: #223;
+      background: #888;
+      cursor: pointer;
+    }
+      .disk-info ul { display: block; padding: 0; margin: 0; width: 200px; }
+
+      .disk-info h2 {
+        margin: 0;
+        font-weight: 600;
+        font-size: 1.8em;
+        text-transform: uppercase;
+      }
+
+      .disk-info li {
+        color: #D0D0D0;
+        font-size: 0.9em;
+        line-height: 1.4em;
+        margin-left: 15px;
+        list-style: none;
+      }
+      .disk-info li:before {
+        color: #EEE;
+        content: attr(title) ': ';
+        font-weight: bold;
+      }
+
+      .disk-status {
+        background: #FFF;
+        float: left;
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+      }
+
+    #tasks {
+      background: #09A;
+      background: #888;
+      width: 100%;
+    }
+      .task {
+        color: #EEE;
+        cursor: pointer;
+        float: left;
+        font-weight: bold;
+        height: 55px;
+        line-height: 55px;
+        padding: 0 35px;
+        text-transform: uppercase;
+      }
+      .task:hover {
+        background: #777;
+      }
+      .task.active {
+      }
+      .task.active:after {
+      }
+      /* pseudo-shadow */
+      .task.active:before {
+      }
+
+    #items {
+      background: #CCC;
+      background: #BBB;
+      height: auto;
+      width: 100%;
+    }
+    #items ul {
+      margin: 0;
+    }
+    .item {
+      color: #888;
+      cursor: pointer;
+      display: block;
+      float: left;
+      font-size: 14px;
+      margin: 0;
+      padding-top: 7px;
+      padding: 5px 25px;
+    }
+    .item:hover {
+      background: #AAA;
+    }
+    .item.active {
+    }
+    .item.active:after {
+    }
+
+    #right {
+      float: left;
+      width: 70%;
+    }
+    #viewport {
+      /** background: #D0D0D0; */
+      min-height: 415px;
+      float: left;
+      width: 100%;
+      padding: 10px;
+    }
+
+    #disks {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .disk {
+      float: left;
+      width: 44%;
+      padding: 3%;
+      list-style: none;
+    }
+    .disk ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sorted.desc:after {
+      content: " \25b2";
+    }
+    .sorted.asc:after {
+      content: " \25bc";
+    }
+
+    /** Progress bar styling */
+    .progress {
+        width: 250px;
+        height: 20px;
+        border-radius: 10px;
+        background: #222;
+    }
+    .progress .percent {
+      width: 250px;
+      position: absolute;
+      text-align: center;
+      color: white;
+    }
+    .progress div {
+      height: 30px;
+    }
+    .red, .warn-level-2 {
+      background: #ED5151;
+    }
+    .yellow, .warn-level-1 {
+      background: #F2F06B;
+    }
+    .blue, .warn-level-0 {
+      background: #4AD1F0;
+    }
+    .green {
+      background: #6AF795;
+    }
