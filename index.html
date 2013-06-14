@@ -115,7 +115,9 @@
         <% }); %>
       </tbody>
     </table>
-    <button class='loadMore'>Load More</button>
+    <% if(options.count * options.page < obj.length) { %>
+      <button class='loadMore'>Load More</button>
+    <% } %>
   </script>
 
   <script type='text/template' id='files-template'>
@@ -137,7 +139,9 @@
         <% }); %>
       </tbody>
     </table>
-    <button class='loadMore'>Load More</button>
+    <% if(options.count * options.page < obj.length) { %>
+      <button class='loadMore'>Load More</button>
+    <% } %>
   </script>
 
   <script type='text/template' id='work-template'>

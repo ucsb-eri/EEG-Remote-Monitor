@@ -1,9 +1,0 @@
-{
-  "name": "remotemon-frontend",
-  "version": "0.0.0",
-  "dependencies": {
-    "bootstrap": "http://twitter.github.com/bootstrap/assets/bootstrap.zip",
-    "underscore": "~1.4.4",
-    "jquery": "~2.0.1",
-  }
-}

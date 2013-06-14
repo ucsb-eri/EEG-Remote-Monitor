@@ -18,9 +18,9 @@
 				_.each(sorted, function(item) {
 					callback(item);
 				});
-			} else {
-				return sorted;
 			}
+
+			return sorted;
 		},
 		limitSort: function(list, prop, dir, options, callback) {
 			var sorted = _.multiSort(list, prop, dir),
@@ -30,9 +30,9 @@
 				_.each(limited, function(item) {
 					callback(item);
 				});
-			} else {
-				return limited;
 			}
+			
+			return limited;
 		} 
 	});
 
@@ -238,7 +238,7 @@
 			this.url = 'sites/' + id + '/cpu';
 		},
 		sortTarget: 'tstamp',
-		sortOrder: 1
+		sortOrder: -1
 	});
 
 	var Files = Backbone.SortableCollection.extend({
@@ -247,7 +247,7 @@
 			this.url = 'sites/' + id + '/files';
 		},
 		sortTarget: 'id',
-		sortOrder: 1
+		sortOrder: -1
 	});
 
 	var Work = Backbone.SortableCollection.extend({
@@ -255,7 +255,7 @@
 			this.url = 'sites/' + id + '/work';
 		},
 		sortTarget: 'start',
-		sortOrder: 1
+		sortOrder: -1
 	});
 
 	var Sites = Backbone.SortableCollection.extend({
