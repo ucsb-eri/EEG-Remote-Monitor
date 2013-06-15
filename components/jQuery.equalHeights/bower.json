@@ -1,0 +1,9 @@
+{
+  "name": "jQuery.equalHeights",
+  "version": "0.0.0",
+  "commit": "cca79d3ef9f6580aaf0cec92cf218827a036274c",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mattbanks/jQuery.equalHeights.git"
+  }
+}

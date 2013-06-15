@@ -4,262 +4,290 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  background-color: #ffffff;
+}
 
-    table {
-      width: 100%;
-    }
-    th {
-      cursor: pointer;
-    }
-    button.loadMore {
-      background: #888;
-      border: none;
-      border-radius: 5px;
-      padding: 7px 15px;
-      color: #eee;
-    }
-    #app {
-      background: #EEE;
-      padding: 35px 0;
-    }
-    .title {
-      color: #888;
-      font-size: 81px;
-      font-weight: normal;
-      letter-spacing: -4px;
-      margin-bottom: 28px;
+table {
+  width: 100%;
+}
+th {
+  cursor: pointer;
+}
+button.loadMore {
+  background: #888;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 15px;
+  color: #eee;
+}
+#app {
+  background: #EEE;
+  padding: 35px 0;
+}
+.title {
+  color: #888;
+  font-size: 81px;
+  font-weight: normal;
+  letter-spacing: -4px;
+  line-height: 1em;
+  margin-bottom: 28px;
+  margin-left: 15px;
+}
+
+.container {
+  overflow: hidden;
+  clear: both;
+}
+.column {
+  float: left;
+  /** Auto height CSS fix */
+  padding-bottom: 1000000000px;
+  margin-bottom: -1000000000px;
+}
+
+#sites {
+/*
+  background: #001;
+  background: #112;
+*/
+  min-height: 500px;
+  overflow: visible;
+  float: left;
+  width: 30%;
+}
+#sites ul {
+  position: relative;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.site {
+  background: #001;
+  background: #AAA;
+  color: #FFF;
+  display: block;
+  list-style: none;
+  margin-right: 0;
+  margin-bottom: 1px;
+  padding: 15px 30px 25px 60px;
+}
+.site:hover {
+  background: #223;
+  background: #9f9f9f;
+  cursor: pointer;
+}
+.site.active {
+  background: #223;
+  background: #888;
+  cursor: pointer;
+}
+.disk-info {
+ul { 
+	display: block;
+	padding: 0;
+	margin: 0;
+	width: 200px; 
+}
+h2 {
+      margin: 0;
+      font-weight: 600;
+      font-size: 1.8em;
+      text-transform: uppercase;
+  }
+  li {
+      color: #D0D0D0;
+      font-size: 0.9em;
+      line-height: 1.4em;
       margin-left: 15px;
-    }
-
-    .container {
-      overflow: hidden;
-      clear: both;
-    }
-    .column {
-      float: left;
-      /** Auto height CSS fix */
-      padding-bottom: 1000000000px;
-      margin-bottom: -1000000000px;
-    }
-
-    #sites {
-    /*
-      background: #001;
-      background: #112;
-    */
-      min-height: 500px;
-      overflow: visible;
-      float: left;
-      width: 30%;
-    }
-    #sites ul {
-      position: relative;
-      margin: 0;
-      white-space: nowrap;
-    }
-
-    .site {
-      background: #001;
-      background: #AAA;
-      color: #FFF;
-      display: block;
       list-style: none;
-      margin-right: 0;
-      margin-bottom: 1px;
-      padding: 15px 30px 25px 60px;
-    }
-    .site:hover {
-      background: #223;
-      background: #9f9f9f;
-      cursor: pointer;
-    }
-    .site.active {
-      background: #223;
-      background: #888;
-      cursor: pointer;
-    }
-    .disk-info {
-		ul { 
-			display: block;
-			padding: 0;
-			margin: 0;
-			width: 200px; 
-		}
-		h2 {
-	        margin: 0;
-	        font-weight: 600;
-	        font-size: 1.8em;
-	        text-transform: uppercase;
-	    }
-	    li {
-	        color: #D0D0D0;
-	        font-size: 0.9em;
-	        line-height: 1.4em;
-	        margin-left: 15px;
-	        list-style: none;
-	        &:before {
-		        color: #EEE;
-		        content: attr(title) ': ';
-		        font-weight: bold;
-	        }
-	    }
-	    .task-options {
-			position: absolute;
-			right: -100px;
-			top: -20px;
-			background: #333;
-			border-radius: 2px;
-			color: #fff;
-			span {
-				display: block;
-				padding: 5px;
-				&:hover {
-					background: #444;
-				}
-			}
-			&:before {
-				content: "";
-				left: -10px;
-				position: absolute;
-				top: 60px;
-				width: 0;
-				height: 0;
-				border-bottom: 10px solid transparent;
-				border-right: 10px solid #333;
-				border-top: 10px solid transparent;
-			}
-		}
-    }
-    .disk-status {
-        background: #FFF;
-        float: left;
-        width: 50px;
-        height: 50px;
-        margin-right: 15px;
-    }
-    #right {
-      float: left;
-      width: 70%;
-    }
-
-    #tasks {
-      background: #09A;
-      background: #888;
-      width: 100%;
-    }
-      .task {
+      &:before {
         color: #EEE;
-        cursor: pointer;
-        float: left;
+        content: attr(title) ': ';
         font-weight: bold;
-        height: 55px;
-        line-height: 55px;
-        padding: 0 35px;
-        text-transform: uppercase;
       }
-      .task:hover {
-        background: #777;
-      }
-      .task.active {
-      }
-      .task.active:after {
-      }
-      /* pseudo-shadow */
-      .task.active:before {
-      }
+  }
+  .task-options {
+	position: absolute;
+	right: -100px;
+	top: -20px;
+	background: #333;
+	border-radius: 2px;
+	color: #fff;
+	span {
+		display: block;
+		padding: 5px;
+		&:hover {
+			background: #444;
+		}
+	}
+	&:before {
+		content: "";
+		left: -10px;
+		position: absolute;
+		top: 60px;
+		width: 0;
+		height: 0;
+		border-bottom: 10px solid transparent;
+		border-right: 10px solid #333;
+		border-top: 10px solid transparent;
+	}
+}
+}
+.disk-status {
+    background: #FFF;
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+#right {
+  float: right;
+  width: 70%;
+}
 
-    #items {
-      background: #CCC;
-      background: #BBB;
-      height: auto;
-      width: 100%;
-    }
-    #items ul {
-      margin: 0;
-    }
-    .item {
-      color: #888;
-      cursor: pointer;
-      display: block;
-      float: left;
-      font-size: 14px;
-      margin: 0;
-      padding-top: 7px;
-      padding: 5px 25px;
-    }
-    .item:hover {
-      background: #AAA;
-    }
-    .item.active {
-    }
-    .item.active:after {
-    }
+#tasks {
+  background: #09A;
+  background: #888;
+  width: 100%;
+  .task {
+    color: #EEE;
+    cursor: pointer;
+    float: left;
+    font-weight: bold;
+    height: 55px;
+    line-height: 55px;
+    padding: 0 35px;
+    text-transform: uppercase;
+  }
+  .task:hover {
+    background: #777;
+  }
+  .task.active {
+  }
+  .task.active:after {
+  }
+  /* pseudo-shadow */
+  .task.active:before {
+  }
+}
 
-    #viewport {
-      /** background: #D0D0D0; */
-      min-height: 415px;
-      padding: 10px;
-    }
+#items {
+  background: #CCC;
+  background: #BBB;
+  height: auto;
+  width: 100%;
+}
+#items ul {
+  margin: 0;
+}
+.item {
+  color: #888;
+  cursor: pointer;
+  display: block;
+  float: left;
+  font-size: 14px;
+  margin: 0;
+  padding-top: 7px;
+  padding: 5px 25px;
+}
+.item:hover {
+  background: #AAA;
+}
+.item.active {
+}
+.item.active:after {
+}
 
-    #disks {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    .disk {
-      float: left;
-      width: 44%;
-      padding: 3%;
-      list-style: none;
-    }
-    .disk ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
+#viewport {
+  /** background: #D0D0D0; */
+  padding: 10px;
+}
 
-    .sorted.desc:after {
-      content: " \25b2";
-    }
-    .sorted.asc:after {
-      content: " \25bc";
-    }
+#disks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.disk {
+  float: left;
+  width: 44%;
+  padding: 3%;
+  list-style: none;
+}
+.disk ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-    .even {
-      background: #ddd;
-    }
-    .odd {
-      background: #ccc;
-    }
+.sorted.desc:after {
+  content: " \25b2";
+}
+.sorted.asc:after {
+  content: " \25bc";
+}
 
-    /** Progress bar styling */
-    .progress {
-        width: 250px;
-        height: 20px;
-        border-radius: 10px;
-        background: #222;
-    }
-    .progress .percent {
-      width: 250px;
-      position: absolute;
-      text-align: center;
-      color: white;
-    }
-    .progress div {
-      height: 30px;
-    }
-    .red, .warn-level-2 {
-      background: #ED5151;
-    }
-    .yellow, .warn-level-1 {
-      background: #F2F06B;
-    }
-    .blue, .warn-level-0 {
-      background: #4AD1F0;
-    }
-    .green {
-      background: #6AF795;
-    }
+.even {
+  background: #ddd;
+}
+.odd {
+  background: #ccc;
+}
+
+/** Progress bar styling */
+.progress {
+    width: 250px;
+    height: 20px;
+    border-radius: 10px;
+    background: #888;
+}
+.progress .percent {
+  width: 250px;
+  position: absolute;
+  text-align: center;
+  color: white;
+}
+
+.progress div {
+  height: 30px;
+}
+.warn-level-2 {
+	border-left: 10px solid #ED5151;
+}
+.warn-level-1 {
+	border-left: 10px solid #F2F06B;
+}
+.warn-level-0 {
+	border-left: 10px solid #4AD1F0;
+}
+.red{
+  background: #ED5151;
+}
+.yellow {
+  background: #F2F06B;
+}
+.blue {
+  background: #4AD1F0;
+}
+.green {
+  background: #6AF795;
+}
+.site.warn-level-2:hover, .site.warn-level-2.active {
+  background: #C44343;
+}
+.site.warn-level-0:hover, .site.warn-level-0.active {
+  background: #42BFDB;
+}
+
+/** jQuery Mobile Fix */
+.ui-loading .ui-loader { display: block; }
+.ui-loader { display: none; position: absolute; opacity: .85; z-index: 100; left: 50%; width: 200px; margin-left: -130px; margin-top: -35px; padding: 10px 30px; }
 
 @media all and (max-width: 979px) {
   #sites, #right {
@@ -268,5 +296,15 @@
   .disk {
     width: 100%;
     clear: both;
+  }
+}
+@media all and (max-width: 560px) {
+  #sites {
+    position: fixed;
+    top: 0;
+    overflow: auto;
+    background: #888;
+    height: 100%;
+    -webkit-transform: translateX(-2000px);
   }
 }

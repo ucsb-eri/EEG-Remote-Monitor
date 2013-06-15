@@ -3,60 +3,60 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta content="yes" name="apple-mobile-web-app-capable" />
 
   <base href="http://web.nees.ucsb.edu/RemoteMon/build/" />
 
-  <title>RemoteMon Prototype</title>
+  <title>Remote Monitor</title>
 
   <!-- Stylesheets -->
   <link rel="stylesheet" type="text/css" href="components/bootstrap/css/bootstrap.css" />
   <link rel="stylesheet" type="text/css" href="components/bootstrap/css/bootstrap-responsive.min.css" />
   <link rel="stylesheet" type="text/css" href="components/toolbar/jquery.toolbars.css" />
+  <link rel="stylesheet" type="text/css" href="components/animate.css/animate.css" />
   <link rel="stylesheet" type="text/css" href="stylesheets/screen.css" />
 </head>
 <body>
   <section class="container" id="app">
     <h1 class="title">Remote Monitor</h1>
-    <div class='row'>
-      <section id="sites">
-        <ul id="sites-list">
-          <!-- Sites rendered here -->
+    <section id="right" class='equal-height'>
+      <section class="clearfix" id="tasks">
+        <div class="task active" data-task="info">
+          Info
+        </div>
+        <div class="task" data-task="disk">
+          Disk
+        </div>
+        <div class="task" data-task="cpu">
+          CPU
+        </div>
+        <div class="task" data-task="file">
+          Files
+        </div>
+        <div class="task" data-task="work">
+          Work
+        </div>
+      </section>
+
+      <section id="items" class="clearfix">
+        <ul>
+          <li class="item active">HDA1</li>
+          <li class="item">HDA2</li>
+          <li class="item">HDA3</li>
+          <li class="item">HDA4</li>
         </ul>
       </section>
 
-      <section id="right">
-        <section class="clearfix" id="tasks">
-          <div class="task active" data-task="info">
-            Info
-          </div>
-          <div class="task" data-task="disk">
-            Disk
-          </div>
-          <div class="task" data-task="cpu">
-            CPU
-          </div>
-          <div class="task" data-task="file">
-            Files
-          </div>
-          <div class="task" data-task="work">
-            Work
-          </div>
-        </section>
-
-        <section id="items" class="clearfix">
-          <ul>
-            <li class="item active">HDA1</li>
-            <li class="item">HDA2</li>
-            <li class="item">HDA3</li>
-            <li class="item">HDA4</li>
-          </ul>
-        </section>
-
-        <section id="viewport" class="">
-          <!-- Site info rendered here -->
-        </section>
+      <section id="viewport" class="">
+        <!-- Site info rendered here -->
       </section>
-    </div>
+    </section>
+
+    <section id="sites" class='equal-height animated'>
+      <ul id="sites-list">
+        <!-- Sites rendered here -->
+      </ul>
+    </section>
   </section>
 
   <!-- App templates -->
@@ -172,6 +172,8 @@
   <!-- JS resources -->
   <script src="components/underscore/underscore.js"></script>
   <script src="components/jquery/jquery.js"></script>
+  <script src='components/jQuery.equalHeights/jquery.equalheights.min.js'></script>
+  <script src='//code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js'></script>
   <script src="components/backbone/backbone.js"></script>
   <script src="components/bootstrap/js/bootstrap.js"></script>
   <script src="components/toolbar/jquery.toolbar.js"></script>

@@ -210,7 +210,10 @@ body {
     .progress div {
       height: 30px;
     }
-    .red, .warn-level-2 {
+	.warn-level-2 {
+		border-left: 10px solid #ED5151;
+	}
+    .red {
       background: #ED5151;
     }
     .yellow, .warn-level-1 {

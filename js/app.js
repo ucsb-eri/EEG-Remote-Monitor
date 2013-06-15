@@ -347,7 +347,12 @@
 		el: '#app',
 		events: {
 			'click #tasks': 'route',
-			'click .site': 'route'
+			'click .site': 'route',
+			'tap .site': 'route',
+			'tap #tasks': 'route',
+			'resize': 'toggleAnimation',
+			'swiperight': 'show',
+			'swipeleft': 'hide'
 		},
 		options: {
 			state: 'info'
@@ -371,6 +376,8 @@
 			var active = sites.findWhere({active: true}),
 				id;
 
+			e.preventDefault();
+
 			this.options.state = $(e.target).data('task') || this.options.state;
 
 			if(active || $(e.currentTarget).data('id')) {
@@ -379,6 +386,30 @@
 			}
 
 			return this;
+		},
+		toggleAnimation: function() {
+			var sidebar = $('#sites');
+			if(window.innerWidth > 560) {
+				sidebar.removeClass('bounceOutLeft');
+				sidebar.removeClass('bounceInLeft');
+				sidebar.removeClass('animated');
+			} else {
+				sidebar.addClass('animated');
+			}
+		},
+		show: function() {
+			var sidebar = $('#sites');
+			$('#app').on('swiperight', function() {
+				sidebar.removeClass('bounceOutLeft')
+				sidebar.addClass('bounceInLeft');
+			});
+		},
+		hide: function() {
+			var sidebar = $('#sites');
+			$('#app').on('swipeleft', function() {
+				sidebar.removeClass('bounceInLeft');
+				sidebar.addClass('bounceOutLeft');
+			});
 		}
 	});
 	new AppView();

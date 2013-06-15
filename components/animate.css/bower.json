@@ -1,0 +1,9 @@
+{
+  "name": "animate.css",
+  "version": "0.0.0",
+  "commit": "8429a2d0d7b88200f000986c0f6b02522ba4a4a4",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/daneden/animate.css.git"
+  }
+}
