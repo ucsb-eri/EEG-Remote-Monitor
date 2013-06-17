@@ -1,0 +1,17 @@
+{
+  "name": "jquery-mobile-events",
+  "version": "1.4.0pre",
+  "main": "./jquery-mobile-events.js",
+  "depencencies": {
+    "jquery": "x"
+  },
+  "gitHead": "9655d08a8b5922ee2a987d7e9cee97a74b7765dd",
+  "readme": "# jquery-mobile-events\n\nA component for just the jquery-mobile events.\n\n```js\nbower install jquery-mobile-events\n```\n",
+  "readmeFilename": "README.md",
+  "_id": "jquery-mobile-events@1.4.0pre",
+  "description": "A component for just the jquery-mobile events.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/caseywebdev/jquery-mobile-events"
+  }
+}
