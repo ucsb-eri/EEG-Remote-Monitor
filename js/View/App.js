@@ -1,8 +1,12 @@
 define([
 	  'Router/Router'
+	, 'Collection/Sites'
+	, 'underscore'
+	, 'jquery'
+	, 'backbone'
 	, 'domReady'],
 
-function(Router) {
+function(Router, Sites, _, $, Backbone) {
 
 	var AppView = Backbone.View.extend({
 		el: '#app',
@@ -19,8 +23,8 @@ function(Router) {
 		},
 		initialize: function () {
 			// Do things
-			this.listenTo(sites, 'add change', this.render);
-			sites.fetch({
+			this.listenTo(Sites, 'add change', this.render);
+			Sites.fetch({
 				success: function() {
 					Backbone.history.start({pushState: true, root: App.webroot});
 				}
@@ -28,12 +32,12 @@ function(Router) {
 		},
 		render: function() {
 			var template = _.template($('#sites-template').html()),
-				html = template({sites: sites.toJSON()});
+				html = template({sites: Sites.toJSON()});
 
 			$('#sites-list').html(html);
 		},
 		route: function (e) {
-			var active = sites.findWhere({active: true}),
+			var active = Sites.findWhere({active: true}),
 				id, state;
 
 			e.preventDefault();

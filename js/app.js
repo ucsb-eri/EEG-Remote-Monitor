@@ -10,18 +10,25 @@ require.config({
 		, 'underscore': 'components/underscore/underscore'
 		, 'backbone': 'components/backbone/backbone'
 		, 'domReady': 'components/requirejs-domready/domReady'
+	},
+	shim: {
+		'backbone': {
+			exports: 'Backbone'
+		},
+		'underscore': {
+			exports: '_'
+		}
 	}
 })
 
-define([
-	  'jquery'
-	, 'underscore'
-	, 'backbone'],
+define(['jquery'],
 
-function() {
+function($) {
 	'use strict';
 
-	require(['View/App']);
+	require(['View/App'], function(View) {
+		console.log(View);
+	});
 
 	// Random actions.
 
