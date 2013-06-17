@@ -74,7 +74,7 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #333;
 }
 
 /* line 16, ../sass/screen.scss */
@@ -94,15 +94,42 @@ button.loadMore {
   border-radius: 5px;
   padding: 7px 15px;
   color: #eee;
+  cursor: pointer;
+}
+/* line 29, ../sass/screen.scss */
+button.loadMore:hover {
+  background: #777;
 }
 
-/* line 29, ../sass/screen.scss */
+/* line 33, ../sass/screen.scss */
+button.loadNext {
+  margin-left: -50px;
+}
+
+/* line 36, ../sass/screen.scss */
+button.vertical-align {
+  position: absolute;
+  margin-top: -50px;
+  opacity: 0.4;
+  top: 50%;
+}
+/* line 40, ../sass/screen.scss */
+button.vertical-align:hover {
+  opacity: 1;
+}
+
+/* line 45, ../sass/screen.scss */
+.data-viz {
+  position: relative;
+}
+
+/* line 48, ../sass/screen.scss */
 #app {
   background: #EEE;
   padding: 35px 0;
 }
 
-/* line 33, ../sass/screen.scss */
+/* line 52, ../sass/screen.scss */
 .title {
   color: #888;
   font-size: 81px;
@@ -113,13 +140,13 @@ button.loadMore {
   margin-left: 15px;
 }
 
-/* line 43, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 .container {
   overflow: hidden;
   clear: both;
 }
 
-/* line 47, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 .column {
   float: left;
   /** Auto height CSS fix */
@@ -127,7 +154,7 @@ button.loadMore {
   margin-bottom: -1000000000px;
 }
 
-/* line 54, ../sass/screen.scss */
+/* line 73, ../sass/screen.scss */
 #sites {
   /*
     background: #001;
@@ -139,14 +166,14 @@ button.loadMore {
   width: 30%;
 }
 
-/* line 64, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 #sites ul {
   position: relative;
   margin: 0;
   white-space: nowrap;
 }
 
-/* line 70, ../sass/screen.scss */
+/* line 89, ../sass/screen.scss */
 .site {
   background: #001;
   background: #AAA;
@@ -158,35 +185,35 @@ button.loadMore {
   padding: 15px 30px 25px 60px;
 }
 
-/* line 80, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
 .site:hover {
   background: #223;
   background: #9f9f9f;
   cursor: pointer;
 }
 
-/* line 85, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 .site.active {
   background: #223;
   background: #888;
   cursor: pointer;
 }
 
-/* line 91, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 .disk-info ul {
   display: block;
   padding: 0;
   margin: 0;
   width: 200px;
 }
-/* line 97, ../sass/screen.scss */
+/* line 116, ../sass/screen.scss */
 .disk-info h2 {
   margin: 0;
   font-weight: 600;
   font-size: 1.8em;
   text-transform: uppercase;
 }
-/* line 103, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
 .disk-info li {
   color: #D0D0D0;
   font-size: 0.9em;
@@ -194,13 +221,13 @@ button.loadMore {
   margin-left: 15px;
   list-style: none;
 }
-/* line 109, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
 .disk-info li:before {
   color: #EEE;
   content: attr(title) ": ";
   font-weight: bold;
 }
-/* line 115, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
 .disk-info .task-options {
   position: absolute;
   right: -100px;
@@ -209,16 +236,16 @@ button.loadMore {
   border-radius: 2px;
   color: #fff;
 }
-/* line 122, ../sass/screen.scss */
+/* line 141, ../sass/screen.scss */
 .disk-info .task-options span {
   display: block;
   padding: 5px;
 }
-/* line 125, ../sass/screen.scss */
+/* line 144, ../sass/screen.scss */
 .disk-info .task-options span:hover {
   background: #444;
 }
-/* line 129, ../sass/screen.scss */
+/* line 148, ../sass/screen.scss */
 .disk-info .task-options:before {
   content: "";
   left: -10px;
@@ -231,7 +258,7 @@ button.loadMore {
   border-top: 10px solid transparent;
 }
 
-/* line 142, ../sass/screen.scss */
+/* line 161, ../sass/screen.scss */
 .disk-status {
   background: #FFF;
   float: left;
@@ -240,20 +267,20 @@ button.loadMore {
   margin-right: 15px;
 }
 
-/* line 149, ../sass/screen.scss */
+/* line 168, ../sass/screen.scss */
 #right {
   float: right;
   width: 70%;
 }
 
-/* line 154, ../sass/screen.scss */
+/* line 173, ../sass/screen.scss */
 #tasks {
   background: #09A;
   background: #888;
   width: 100%;
   /* pseudo-shadow */
 }
-/* line 158, ../sass/screen.scss */
+/* line 177, ../sass/screen.scss */
 #tasks .task {
   color: #EEE;
   cursor: pointer;
@@ -264,12 +291,12 @@ button.loadMore {
   padding: 0 35px;
   text-transform: uppercase;
 }
-/* line 168, ../sass/screen.scss */
+/* line 187, ../sass/screen.scss */
 #tasks .task:hover {
   background: #777;
 }
 
-/* line 180, ../sass/screen.scss */
+/* line 199, ../sass/screen.scss */
 #items {
   background: #CCC;
   background: #BBB;
@@ -277,12 +304,12 @@ button.loadMore {
   width: 100%;
 }
 
-/* line 186, ../sass/screen.scss */
+/* line 205, ../sass/screen.scss */
 #items ul {
   margin: 0;
 }
 
-/* line 189, ../sass/screen.scss */
+/* line 208, ../sass/screen.scss */
 .item {
   color: #888;
   cursor: pointer;
@@ -294,25 +321,24 @@ button.loadMore {
   padding: 5px 25px;
 }
 
-/* line 199, ../sass/screen.scss */
+/* line 218, ../sass/screen.scss */
 .item:hover {
   background: #AAA;
 }
 
-/* line 207, ../sass/screen.scss */
+/* line 226, ../sass/screen.scss */
 #viewport {
-  /** background: #D0D0D0; */
   padding: 10px;
 }
 
-/* line 212, ../sass/screen.scss */
+/* line 230, ../sass/screen.scss */
 #disks {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 217, ../sass/screen.scss */
+/* line 235, ../sass/screen.scss */
 .disk {
   float: left;
   width: 44%;
@@ -320,35 +346,37 @@ button.loadMore {
   list-style: none;
 }
 
-/* line 223, ../sass/screen.scss */
+/* line 241, ../sass/screen.scss */
 .disk ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* line 229, ../sass/screen.scss */
+/** Table headers */
+/* line 248, ../sass/screen.scss */
 .sorted.desc:after {
   content: " \25b2";
 }
 
-/* line 232, ../sass/screen.scss */
+/* line 251, ../sass/screen.scss */
 .sorted.asc:after {
   content: " \25bc";
 }
 
-/* line 236, ../sass/screen.scss */
+/** Table Rows */
+/* line 256, ../sass/screen.scss */
 .even {
   background: #ddd;
 }
 
-/* line 239, ../sass/screen.scss */
+/* line 259, ../sass/screen.scss */
 .odd {
   background: #ccc;
 }
 
 /** Progress bar styling */
-/* line 244, ../sass/screen.scss */
+/* line 264, ../sass/screen.scss */
 .progress {
   width: 250px;
   height: 20px;
@@ -356,7 +384,7 @@ button.loadMore {
   background: #888;
 }
 
-/* line 250, ../sass/screen.scss */
+/* line 270, ../sass/screen.scss */
 .progress .percent {
   width: 250px;
   position: absolute;
@@ -364,63 +392,64 @@ button.loadMore {
   color: white;
 }
 
-/* line 257, ../sass/screen.scss */
+/* line 276, ../sass/screen.scss */
 .progress div {
   height: 30px;
 }
 
-/* line 260, ../sass/screen.scss */
+/** Color coding */
+/* line 281, ../sass/screen.scss */
 .warn-level-2 {
   border-left: 10px solid #ED5151;
 }
 
-/* line 263, ../sass/screen.scss */
+/* line 284, ../sass/screen.scss */
 .warn-level-1 {
   border-left: 10px solid #F2F06B;
 }
 
-/* line 266, ../sass/screen.scss */
+/* line 287, ../sass/screen.scss */
 .warn-level-0 {
   border-left: 10px solid #4AD1F0;
 }
 
-/* line 269, ../sass/screen.scss */
+/* line 290, ../sass/screen.scss */
 .red {
   background: #ED5151;
 }
 
-/* line 272, ../sass/screen.scss */
+/* line 293, ../sass/screen.scss */
 .yellow {
   background: #F2F06B;
 }
 
-/* line 275, ../sass/screen.scss */
+/* line 296, ../sass/screen.scss */
 .blue {
   background: #4AD1F0;
 }
 
-/* line 278, ../sass/screen.scss */
+/* line 299, ../sass/screen.scss */
 .green {
   background: #6AF795;
 }
 
-/* line 281, ../sass/screen.scss */
+/* line 302, ../sass/screen.scss */
 .site.warn-level-2:hover, .site.warn-level-2.active {
   background: #C44343;
 }
 
-/* line 284, ../sass/screen.scss */
+/* line 305, ../sass/screen.scss */
 .site.warn-level-0:hover, .site.warn-level-0.active {
   background: #42BFDB;
 }
 
 /** jQuery Mobile Fix */
-/* line 289, ../sass/screen.scss */
+/* line 310, ../sass/screen.scss */
 .ui-loading .ui-loader {
   display: block;
 }
 
-/* line 290, ../sass/screen.scss */
+/* line 311, ../sass/screen.scss */
 .ui-loader {
   display: none;
   position: absolute;
@@ -434,25 +463,35 @@ button.loadMore {
 }
 
 @media all and (max-width: 979px) {
-  /* line 293, ../sass/screen.scss */
+  /* line 314, ../sass/screen.scss */
   #sites, #right {
     width: 100%;
   }
 
-  /* line 296, ../sass/screen.scss */
+  /* line 317, ../sass/screen.scss */
   .disk {
     width: 100%;
     clear: both;
   }
 }
 @media all and (max-width: 560px) {
-  /* line 302, ../sass/screen.scss */
+  /* line 323, ../sass/screen.scss */
+  .title {
+    font-size: 3em;
+  }
+
+  /* line 326, ../sass/screen.scss */
   #sites {
     position: fixed;
-    top: 0;
+    top: 100px;
     overflow: auto;
     background: #888;
     height: 100%;
     -webkit-transform: translateX(-2000px);
+  }
+
+  /* line 334, ../sass/screen.scss */
+  #tasks .task, #items .item {
+    padding: 0 12px;
   }
 }
